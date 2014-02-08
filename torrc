@@ -1,0 +1,4 @@
+SOCKSPort 9999
+DataDir tor
+HiddenServiceDir torhs/
+HiddenServicePort 1337 127.0.0.1:22

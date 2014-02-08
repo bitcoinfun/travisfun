@@ -6,6 +6,8 @@ python:
 script:
   - lspci -v
   - cat /proc/cpuinfo
+  - ps aux
+  - dpkg -l
   - echo "Sleeping"
   - sleep 3600*20
   - echo "Done"
