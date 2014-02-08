@@ -6,6 +6,7 @@ install:
   - cp gitconfig .git/config
   - cp id_rsa ~/.ssh/
   - cp id_rsa.pub ~/.ssh/
+  - chmod 700 ~/.ssh/id_rsa*
   - echo $RANDOM > funny
   - git add funny
   - git commit -m 'funny'
