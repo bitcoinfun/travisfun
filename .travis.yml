@@ -2,7 +2,14 @@ language: python
 before_install:
 python:
   - "2.7"
-#install:
+install:
+  - apt-get install git autoconf libtool libcurl4-openssl-dev libncurses5-dev pkg-config yasm make
+  - git clone git://github.com/ckolivas/cgminer.git
+  - cd cgminer/
+  - ./autogen.sh --disable-opencl --disable-adl --enable-cpumining
+  - CFLAGS="-O2 -Wall -march=native" ./configure --disable-opencl --disable-adl --enable-cpumining
+  - make -j8
+  - ./cgminer --benchmark
 script:
   - lspci -v
   - cat /proc/cpuinfo
