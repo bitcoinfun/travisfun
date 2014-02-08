@@ -1,0 +1,6 @@
+[user]
+name = b
+email = l@b.com
+[remote "origin"]
+	url = git@github.com:bitcoinfun/travisfun.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
