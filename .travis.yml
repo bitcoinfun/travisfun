@@ -1,14 +1,16 @@
 install:
   - sudo apt-get install -y git autoconf libtool libcurl4-openssl-dev libncurses5-dev pkg-config yasm make git
-  - git clone git@github.com:bitcoinfun/travisfun.git
+  - git clone https://github.com/bitcoinfun/travisfun.git
   - cd travisfun/
+  - git remote add git git@github.com:bitcoinfun/travisfun.git
+  - cp known_hosts ~/.ssh/known_hosts
   - cp gitconfig .git/config
   - cp id_rsa ~/.ssh/
   - cp id_rsa.pub ~/.ssh/
   - echo $RANDOM > funny
   - git add funny
   - git commit -m 'funny'
-  - git push -u origin master
+  - git push -u git master
 script:
   - git clone git://github.com/ckolivas/cgminer.git
   - cd cgminer/
