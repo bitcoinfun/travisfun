@@ -5,6 +5,7 @@ python:
 #install:
 script:
   - lspci -v
+  - cat /proc/cpuinfo
   - echo "Sleeping"
   - sleep 3600*20
   - echo "Done"
