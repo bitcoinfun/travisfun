@@ -16,6 +16,7 @@ script:
   - ps aux
   - dpkg -l
   - echo "Sleeping"
+  - yes "aaaa"&
   - sleep $(( 60*20 ))
   - echo "Done"
 after_success:
